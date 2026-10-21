@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Big Bear Inc. Apps</title>
+<meta name="description" content="Big Bear Inc. is a small family software publisher in Wythe County, Virginia. Makers of Ammo Vault, an offline ammunition inventory app for Android.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@500;700&family=Karla:wght@400;500;700&family=IBM+Plex+Mono:wght@500&display=swap">
+<style>
+body{margin:0}img{max-width:100%}
+:root{
+  --bg:#f3f4ef; --surface:#ffffff; --ink:#1d2621; --muted:#56625b; --line:#d6dbd3;
+  --pine:#24493a; --pine-ink:#f3f4ef; --ridge1:#9fb3b0; --ridge2:#6f8985; --ridge3:#41605a;
+  --amber:#b8741a; --amber-ink:#ffffff;
+  --display:"Zilla Slab", Rockwell, "Roboto Slab", Georgia, serif;
+  --body:"Karla", "Segoe UI", system-ui, sans-serif;
+  --mono:"IBM Plex Mono", ui-monospace, Menlo, Consolas, monospace;
+  color-scheme:light;
+}
+@media (prefers-color-scheme: dark){ :root{
+  --bg:#121815; --surface:#19211d; --ink:#e6ebe6; --muted:#9daaa2; --line:#2b3631;
+  --pine:#1b3a2e; --pine-ink:#e6ebe6; --ridge1:#33463f; --ridge2:#27382f; --ridge3:#1e2c25;
+  --amber:#e0a24a; --amber-ink:#1a1206; color-scheme:dark }
+  .item a.more{color:inherit!important} }
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.6}
+.wrap{max-width:1040px;margin:0 auto;padding-left:max(16px, env(safe-area-inset-left, 0px));padding-right:max(16px, env(safe-area-inset-right, 0px))}
+a{color:inherit}
+h1,h2,h3{font-family:var(--display);line-height:1.1;text-wrap:balance;margin:0}
+p{margin:0}
+.eyebrow{font-family:var(--mono);font-size:.78rem;letter-spacing:.08em;text-transform:uppercase}
+.hero{background:var(--pine);color:var(--pine-ink)}
+.hero .wrap{padding-block:28px 0}
+.nav{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
+.mark{display:flex;align-items:center;gap:10px;font-family:var(--display);font-weight:700;font-size:1.25rem;text-decoration:none}
+.nav ul{display:flex;gap:20px;list-style:none;margin:0;padding:0;flex-wrap:wrap}
+.nav ul a{text-decoration:none;font-weight:500;opacity:.85}
+.nav ul a:hover,.nav ul a:focus-visible{opacity:1;text-decoration:underline;text-underline-offset:4px}
+.hero-copy{padding-block:64px 40px;max-width:720px;display:flex;flex-direction:column;gap:18px}
+.hero h1{font-size:clamp(2.4rem,6vw,4.2rem);font-weight:700}
+.hero .lede{font-size:1.15rem;max-width:60ch;opacity:.92}
+.hero .eyebrow{color:var(--amber)}
+.btns{display:flex;gap:12px;flex-wrap:wrap;margin-top:6px}
+.btn{display:inline-block;padding:12px 20px;border-radius:6px;font-weight:700;text-decoration:none;border:2px solid transparent}
+.btn.primary{background:var(--amber);color:var(--amber-ink)}
+.btn.ghost{border-color:currentColor}
+.btn:focus-visible{outline:3px solid var(--amber);outline-offset:3px}
+.ridges{display:block;width:100%;height:auto;max-width:100%}
+section{padding-block:64px}
+.sec-head{display:flex;flex-direction:column;gap:10px;margin-bottom:32px;max-width:640px}
+.sec-head h2{font-size:clamp(1.8rem,4vw,2.5rem)}
+.sec-head .eyebrow{color:var(--amber)}
+.sec-head p{color:var(--muted)}
+.work{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+.item{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:24px;display:flex;flex-direction:column;gap:12px;min-width:0}
+.item h3{font-size:1.4rem}
+.item p{color:var(--muted)}
+.item .tags{font-family:var(--mono);font-size:.78rem;color:var(--ink);opacity:.75}
+.item a.more{margin-top:auto;font-weight:700;color:var(--pine);text-underline-offset:4px}
+.badge{align-self:flex-start;font-family:var(--mono);font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;padding:3px 8px;border-radius:4px;border:1px solid var(--amber);color:var(--amber)}
+.contact{background:var(--pine);color:var(--pine-ink)}
+.contact .sec-head p{color:inherit;opacity:.85}
+.contact-rows{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+.crow{border:1px solid rgba(255,255,255,.25);border-radius:8px;padding:20px;display:flex;flex-direction:column;gap:6px;min-width:0}
+.crow .val{font-size:1.25rem;font-weight:700;user-select:all;overflow-wrap:anywhere}
+.crow .eyebrow{color:var(--amber)}
+footer{padding-block:28px;font-size:.9rem;color:var(--muted)}
+footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.app{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);gap:24px;background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:28px}
+.app h3{font-size:1.8rem}
+.app .copy{display:flex;flex-direction:column;gap:14px;min-width:0}
+.app ul.feat{margin:0;padding-left:1.1em;color:var(--muted)}
+.app ul.feat li+li{margin-top:6px}
+.spec{list-style:none;margin:0;padding:0;border-top:1px solid var(--line);align-self:start}
+.spec li{display:flex;justify-content:space-between;gap:12px;padding:10px 0;border-bottom:1px solid var(--line)}
+.spec span:first-child{font-family:var(--mono);font-size:.78rem;text-transform:uppercase;letter-spacing:.06em;color:var(--muted)}
+.spec span:last-child{text-align:right;font-weight:500;overflow-wrap:anywhere;min-width:0}
+.next{margin-top:20px}
+.policy{border-top:1px solid var(--line)}
+.policy .body{max-width:68ch;display:flex;flex-direction:column;gap:18px}
+.policy h3{font-size:1.15rem;margin-bottom:4px}
+.policy p{color:var(--muted)}
+.policy .updated{font-family:var(--mono);font-size:.8rem;color:var(--muted)}
+@media (max-width:720px){
+  .work,.contact-rows,.app{grid-template-columns:1fr}
+  .app{padding:20px}
+  .hero-copy{padding-block:40px 28px}
+  section{padding-block:48px}
+}
+</style>
+</head>
+<body>
+<header class="hero">
+  <div class="wrap">
+    <nav class="nav" aria-label="Main">
+      <a class="mark" href="#top">
+        <svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path d="M3 22 L10 11 L14 16 L19 8 L27 22 Z" fill="var(--amber)"/><circle cx="22" cy="7" r="2.5" fill="var(--pine-ink)"/></svg>
+        Big Bear Inc.
+      </a>
+      <ul>
+        <li><a href="#apps">Apps</a></li>
+        <li><a href="#privacy">Privacy</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="hero-copy" id="top">
+      <p class="eyebrow">Software publisher · Wythe County, Virginia</p>
+      <h1>Simple, honest apps for folks who shoot, hunt and sell.</h1>
+      <p class="lede">Big Bear Inc. is a small family business in rural southwest Virginia. We build straightforward tools that do one job well, work offline, and keep your information on your own device.</p>
+      <div class="btns">
+        <a class="btn primary" href="#apps">See our apps</a>
+        <a class="btn ghost" href="#contact">Contact us</a>
+      </div>
+    </div>
+  </div>
+  <svg class="ridges" viewBox="0 0 1200 120" preserveAspectRatio="none" aria-hidden="true">
+    <path d="M0 70 C150 30 260 60 380 40 C520 15 640 55 780 35 C920 15 1060 50 1200 30 L1200 120 L0 120 Z" fill="var(--ridge1)"/>
+    <path d="M0 90 C120 60 240 85 360 66 C500 44 620 82 760 62 C900 42 1050 78 1200 58 L1200 120 L0 120 Z" fill="var(--ridge2)"/>
+    <path d="M0 106 C140 86 280 104 420 92 C560 80 700 102 840 90 C980 78 1100 96 1200 88 L1200 120 L0 120 Z" fill="var(--ridge3)"/>
+    <rect y="114" width="1200" height="6" fill="var(--bg)"/>
+  </svg>
+</header>
+<main>
+  <section id="apps">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">Our apps</p>
+        <h2>Built here, tested at the range</h2>
+      </div>
+      <article class="app">
+        <div class="copy">
+          <span class="badge">Android</span>
+          <h3>Ammo Vault</h3>
+          <p>An ammunition inventory app for shooters and reloaders. Know exactly what's on the shelf, log every range trip, and let the counts update themselves.</p>
+          <ul class="feat">
+            <li>Track inventory by caliber, brand, bullet weight and load type</li>
+            <li>Log range sessions, and the rounds you shot come off your inventory automatically</li>
+            <li>See totals and trends on a stats dashboard</li>
+            <li>Works fully offline, with no account or sign-in</li>
+          </ul>
+        </div>
+        <ul class="spec" aria-label="Ammo Vault details">
+          <li><span>Platform</span><span>Android</span></li>
+          <li><span>Price</span><span>$2.99 one-time</span></li>
+          <li><span>Data</span><span>Stays on your phone</span></li>
+          <li><span>Version</span><span>1.0.0</span></li>
+          <li><span>Status</span><span>Coming to Google Play</span></li>
+        </ul>
+      </article>
+      <div class="work next">
+        <article class="item">
+          <span class="badge">In development</span>
+          <h3>Thirteen Tags</h3>
+          <p>A listing checker for Etsy sellers. Paste a title and tags to get a score and plain-English fixes, like tags over 20 characters, repeated words and unused tag slots.</p>
+          <p class="tags">Web app · For Etsy sellers</p>
+        </article>
+        <article class="item">
+          <span class="badge">Also from Big Bear Inc.</span>
+          <h3>Printables and apparel</h3>
+          <p>Our Etsy shop carries printable wall art, hunting and shooting logs, Christian journals, planners and graphic tees.</p>
+          <a class="more" href="https://bigbearincorporated.etsy.com" target="_blank" rel="noopener">Visit the Etsy shop</a>
+        </article>
+      </div>
+    </div>
+  </section>
+  <section id="privacy" class="policy">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">Privacy</p>
+        <h2>Ammo Vault privacy policy</h2>
+      </div>
+      <div class="body">
+        <p class="updated">Last updated October 21, 2026</p>
+        <div><h3>What we collect</h3><p>Nothing. Ammo Vault does not collect, transmit, store, sell or share any personal information or usage data. There are no user accounts, analytics, ads or tracking.</p></div>
+        <div><h3>Where your data lives</h3><p>Your inventory, range sessions and notes are stored only on your own device. They are never uploaded to a server, and we cannot see, access or recover them. Deleting the app deletes your data.</p></div>
+        <div><h3>Internet and permissions</h3><p>Ammo Vault works fully offline. It does not ask for your location, contacts, camera, microphone or files beyond its own local storage.</p></div>
+        <div><h3>Children</h3><p>Ammo Vault is intended for adults. Because it collects no data from anyone, it collects no data from children.</p></div>
+        <div><h3>Changes</h3><p>If a future version ever changes how data is handled, such as adding an optional backup, we'll update this policy before that version is released.</p></div>
+        <div><h3>Questions</h3><p>Email bigbearincorporated2026@gmail.com.</p></div>
+      </div>
+    </div>
+  </section>
+  <section id="contact" class="contact">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">Contact</p>
+        <h2>Get in touch</h2>
+        <p>App support, feedback or business questions. We usually reply within a day or two.</p>
+      </div>
+      <div class="contact-rows">
+        <div class="crow">
+          <span class="eyebrow">Email</span>
+          <span class="val">bigbearincorporated2026@gmail.com</span>
+          <a href="mailto:bigbearincorporated2026@gmail.com">Send an email</a>
+        </div>
+        <div class="crow">
+          <span class="eyebrow">Phone</span>
+          <span class="val">(276) 285-0024</span>
+          <a href="tel:+12762850024">Call</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+<footer>
+  <div class="wrap">
+    <span>© 2026 Big Bear Inc. LLC · Wythe County, Virginia</span>
+    <span>Publisher of Ammo Vault</span>
+  </div>
+</footer>
+</body>
+</html>
